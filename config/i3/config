@@ -41,6 +41,11 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# Media controls
+bindsym $mod+period exec --no-startup-id playerctl play-pause
+bindsym $mod+comma exec --no-startup-id playerctl previous
+bindsym $mod+slash exec --no-startup-id playerctl next
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -192,7 +197,7 @@ for_window [class="^.*"] border pixel 2
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Wallpaper
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id feh --bg-scale ~/Kuvat/wallhaven-0jo3r5.jpg
 
 # lockscreen
 bindsym $mod+Escape exec --no-startup-id i3lock -c 000000
@@ -205,3 +210,6 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym Print exec --no-startup-id maim "~/Pictures/$(date)"
 bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "~/Pictures/$(date)"
 bindsym Shift+Print exec --no-startup-id maim --select "~/Pictures/$(date)"
+
+# Notifications
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
