@@ -46,6 +46,9 @@ bindsym $mod+period exec --no-startup-id playerctl play-pause
 bindsym $mod+comma exec --no-startup-id playerctl previous
 bindsym $mod+slash exec --no-startup-id playerctl next
 
+# Compositor
+exec_always --no-startup-id "killall -q compton; compton --config ~/.config/compton.conf"
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -197,7 +200,7 @@ for_window [class="^.*"] border pixel 2
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Wallpaper
-exec --no-startup-id feh --bg-scale ~/Kuvat/wallhaven-0jo3r5.jpg
+exec --no-startup-id feh --bg-scale ~/Kuvat/somepicture
 
 # lockscreen
 bindsym $mod+Escape exec --no-startup-id i3lock -c 000000
