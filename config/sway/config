@@ -54,6 +54,10 @@ input * {
     xkb_layout "fi"
 }
 
+input pointer {
+    accel_profile "flat"
+}
+
 ### Key bindings
 #
 # Basics:
