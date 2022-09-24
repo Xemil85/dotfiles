@@ -4,7 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-font pango:SourceHanSansJP-Regular 12
+font pango:NotoSans-Regular 12
 default_border pixel
 ### Variables
 #
