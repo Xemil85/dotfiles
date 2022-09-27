@@ -6,7 +6,7 @@
 
 font pango:NotoSans-Regular 12
 default_border pixel
-gaps inner 8
+gaps inner 6
 
 ### Variables
 #
