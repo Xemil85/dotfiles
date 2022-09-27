@@ -6,6 +6,8 @@
 
 font pango:NotoSans-Regular 12
 default_border pixel
+gaps inner 8
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
